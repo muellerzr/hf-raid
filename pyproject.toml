@@ -1,0 +1,24 @@
+[project]
+name = "hf_raid"
+version = "0.0.1"
+description = "Utilizing multiprocessing to load in Hugging Face models across multiple hard drives"
+authors = [
+  { name = "Zach Mueller", email = "muellerzr@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+  "requests",
+  "fastcore"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
